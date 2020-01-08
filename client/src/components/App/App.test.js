@@ -28,3 +28,8 @@ it('renders the header', () => {
 // it('renders the footer', () => {
 //   expect(component.find(Footer).length).toEqual(1);
 // });
+
+// other samples:
+// it('links to its course details page', () => {
+//   expect(component.find('a.course-card').prop('href')).toEqual('/courses/pass-bys-posts-snapdowns-and-arm-drags')
+// });
