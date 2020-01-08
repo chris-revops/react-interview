@@ -1,47 +1,47 @@
 import axios from 'axios';
 import {
-  FETCH_ITEMS,
-  FETCH_ITEM,
-  CREATE_ITEM,
-  DELETE_ITEM,
-  UPDATE_ITEM
+  FETCH_COMMENTS,
+  FETCH_COMMENT,
+  CREATE_COMMENT,
+  UPDATE_COMMENT,
+  DELETE_COMMENT
 } from '../actions/types';
+import reducers from '../reducers';
 
-// comment for test
+// export const fetchComment = (id) => async dispatch => {
+//   try {
+//     const res = await axios.get(`http://localhost:3001/comments/${id}`);
+//     dispatch({ type: FETCH_COMMENT, payload: res.data });
+//   } catch (error) {
+//     throw error;
+//   }
+// };
 
-export const fetchItems = () => async dispatch => {
+export const fetchComments = () => async dispatch => {
   try {
-    const res = await axios.get('http://localhost:3001/items');
-    dispatch({ type: FETCH_ITEMS, payload: res.data });
+    const res = await axios.get('http://localhost:3001/comments');
+    dispatch({ type: FETCH_COMMENTS, payload: res.data });
   } catch (error) {
     throw error;
   }
 };
 
-export const fetchItem = (id) => async dispatch => {
+export const createComment = (formValues) => async dispatch => {
+  const res = await axios.post('http://localhost:3001/comments', formValues);
+  dispatch({ type: CREATE_COMMENT, payload: res.data });
+}
+
+export const updateComment = ({ id, score }) => async dispatch => {
   try {
-    const res = await axios.get(`http://localhost:3001/items/${id}`);
-    dispatch({ type: FETCH_ITEM, payload: res.data });
+    console.log(score);
+    const res = await axios.patch(`http://localhost:3001/comments/${id}`, { score });
+    dispatch({ type: UPDATE_COMMENT, payload: res.data });
   } catch (error) {
     throw error;
   }
 };
 
-export const createItem = (formValues) => async (dispatch, getState) => {
-  // const { userId } = getState().auth;
-  // const res = await axios.post('http://localhost:3001/items', { ...formValues, userId });
-  const res = await axios.post('http://localhost:3001/items', { ...formValues });
-  dispatch({ type: CREATE_ITEM, payload: res.data });
-  // history.push('/');
-};
-
-export const deleteStream = (id) => async dispatch => {
-  await axios.delete(`http://localhost:3001/items/${id}`);
-  dispatch({ type: DELETE_ITEM, payload: id });
-};
-
-export const updateStream = (id, formValues) => async dispatch => {
-  const res = await axios.patch(`http://localhost:3001/items/${id}`, formValues);
-  dispatch({ type: UPDATE_ITEM, payload: res.data });
-  // history.push('/'); ...or... rerouteCallback()
-};
+// export const deleteComment = (id) => async dispatch => {
+//   await axios.delete(`http://localhost:3001/comments/${id}`);
+//   dispatch({ type: DELETE_COMMENT, payload: id });
+// };

@@ -1,5 +1,5 @@
-export const FETCH_ITEMS = 'FETCH_ITEMS';
-export const FETCH_ITEM = 'FETCH_ITEM';
-export const CREATE_ITEM = 'CREATE_ITEM';
-export const DELETE_ITEM = 'DELETE_ITEM';
-export const UPDATE_ITEM = 'UPDATE_ITEM';
+export const FETCH_COMMENTS = 'FETCH_COMMENTS';
+export const FETCH_COMMENT = 'FETCH_COMMENT';
+export const CREATE_COMMENT = 'CREATE_COMMENT';
+export const UPDATE_COMMENT = 'UPDATE_COMMENT';
+export const DELETE_COMMENT = 'DELETE_COMMENT';

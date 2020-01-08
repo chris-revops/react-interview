@@ -18,6 +18,33 @@
       "id": 2
     }
   ],
+  "comments": [
+    {
+      "text": "first comment",
+      "id": 1,
+      "score": 0
+    },
+    {
+      "text": "second comment",
+      "id": 2,
+      "score": 0
+    },
+    {
+      "text": "Next comment",
+      "id": 3,
+      "score": 2
+    },
+    {
+      "text": "test score",
+      "id": 4,
+      "score": 2
+    },
+    {
+      "text": "latest comment",
+      "id": 5,
+      "score": 0
+    }
+  ],
   "profile": {
     "name": "typicode"
   }
