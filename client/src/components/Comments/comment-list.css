@@ -1,1 +1,22 @@
-.comment-list {}
+.comment-list {
+  
+}
+.comment-list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.comment-list ul li {
+  border: 1px solid lightgray;
+  list-style-type: none;
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+}
+
+.comment-list ul li div {
+  text-align: right;
+}
+
+.comment-list ul li span {
+  margin: 0 1rem;
+}

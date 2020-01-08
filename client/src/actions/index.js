@@ -26,9 +26,10 @@ export const fetchComments = () => async dispatch => {
   }
 };
 
-export const createComment = (formValues) => async dispatch => {
+export const createComment = (formValues, rerouteCallback) => async dispatch => {
   const res = await axios.post('http://localhost:3001/comments', formValues);
   dispatch({ type: CREATE_COMMENT, payload: res.data });
+  rerouteCallback();
 }
 
 export const updateComment = ({ id, score }) => async dispatch => {

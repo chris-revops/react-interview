@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import './comment-list.css';
 import { fetchComments, updateComment } from '../../actions';
 
 class CommentList extends Component {
@@ -16,9 +16,11 @@ class CommentList extends Component {
       return (
         <li key={id}>
           <h5>{text}</h5>
-          <button onClick={() => this.props.updateComment({ id, score: score + 1 })}>Upvote</button>
-          <span>{score}</span>
-          <button onClick={() => this.props.updateComment({ id, score: score - 1 })}>Downvote</button>
+          <div>
+            <button onClick={() => this.props.updateComment({ id, score: score + 1 })}>Upvote</button>
+            <span>{score}</span>
+            <button onClick={() => this.props.updateComment({ id, score: score - 1 })}>Downvote</button>
+          </div>
         </li>
       );
     });

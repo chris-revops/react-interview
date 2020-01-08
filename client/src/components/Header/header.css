@@ -1,0 +1,10 @@
+.header {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.header .nav {
+  margin-right: 2rem;
+}
