@@ -1,21 +1,9 @@
 import axios from 'axios';
 import {
   FETCH_COMMENTS,
-  FETCH_COMMENT,
   CREATE_COMMENT,
   UPDATE_COMMENT,
-  DELETE_COMMENT
 } from '../actions/types';
-import reducers from '../reducers';
-
-// export const fetchComment = (id) => async dispatch => {
-//   try {
-//     const res = await axios.get(`http://localhost:3001/comments/${id}`);
-//     dispatch({ type: FETCH_COMMENT, payload: res.data });
-//   } catch (error) {
-//     throw error;
-//   }
-// };
 
 export const fetchComments = () => async dispatch => {
   try {
@@ -41,8 +29,3 @@ export const updateComment = ({ id, score }) => async dispatch => {
     throw error;
   }
 };
-
-// export const deleteComment = (id) => async dispatch => {
-//   await axios.delete(`http://localhost:3001/comments/${id}`);
-//   dispatch({ type: DELETE_COMMENT, payload: id });
-// };

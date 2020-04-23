@@ -1,10 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { BrowserRouter } from 'react-router-dom';
 import Root from '../../Root';
 import App from './App';
-// import Header from '../Header/Header';
-// import Footer from '../Footer/Footer';
 
 let component;
 
@@ -17,19 +14,5 @@ afterEach(() => {
 });
 
 it('renders the header', () => {
-  console.log(component.debug())
-  // expect(component.find(Header).length).toEqual(1);
+  expect(component).toMatchSnapshot()
 });
-
-// it('has a BrowserRouter', () => {
-//   expect(component.find(BrowserRouter).length).toEqual(1);
-// });
-
-// it('renders the footer', () => {
-//   expect(component.find(Footer).length).toEqual(1);
-// });
-
-// other samples:
-// it('links to its course details page', () => {
-//   expect(component.find('a.course-card').prop('href')).toEqual('/courses/pass-bys-posts-snapdowns-and-arm-drags')
-// });

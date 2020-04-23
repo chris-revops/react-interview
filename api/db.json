@@ -22,17 +22,7 @@
     {
       "text": "First comment, a seed comment",
       "id": 1,
-      "score": 0
-    },
-    {
-      "text": "Second comment, but first comment ever posted.",
-      "id": 2,
-      "score": 0
-    },
-    {
-      "text": "Testing again!",
-      "id": 3,
-      "score": 0
+      "score": 1
     }
   ],
   "profile": {
