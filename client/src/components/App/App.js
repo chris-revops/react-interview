@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import './app.css';
-import Header from '../Header/Header';
-import CreateComment from '../Comments/CreateComment';
-import CommentList from '../Comments/CommentList';
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import "./app.css";
+import Header from "../Header/Header";
+import CreateComment from "../Comments/CreateComment";
+import CommentList from "../Comments/CommentList";
 
 const App = () => {
   return (
