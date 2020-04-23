@@ -18,7 +18,7 @@ class CommentList extends Component {
           <h5>{text}</h5>
           <div>
             <button onClick={() => this.props.updateComment({ id, score: score + 1 })}>Upvote</button>
-            <span>{score}</span>
+            <span>{!!score === true ? score : ""}</span>
             <button onClick={() => this.props.updateComment({ id, score: score - 1 })}>Downvote</button>
           </div>
         </li>
