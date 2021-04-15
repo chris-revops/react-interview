@@ -1,1 +1,7 @@
-.create-comment {}
+.create-comment input {
+  min-width: 30em;
+}
+
+#creat-comment_btn {
+  margin-left: 1em;
+}

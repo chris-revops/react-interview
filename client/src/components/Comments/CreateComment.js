@@ -18,13 +18,19 @@ class CreateComment extends Component {
 
   render() {
     return (
-      <div className="create-comment">
-        <label>Add Comment</label>
-        <input
-          value={this.state.text}
-          onChange={(e) => this.setState({ text: e.target.value })}
-        />
-        <button onClick={this.createComment} className="ui button primary">
+      <div className="create-comment ">
+        <div className="ui labeled input">
+          <div class="ui label">Add Comment</div>
+          <input
+            value={this.state.text}
+            onChange={(e) => this.setState({ text: e.target.value })}
+          />
+        </div>
+        <button
+          id="creat-comment_btn"
+          onClick={this.createComment}
+          className="small ui button primary "
+        >
           Add Comment
         </button>
       </div>

@@ -1,31 +1,9 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "items": [
-    {
-      "name": "Item One",
-      "description": "some item",
-      "id": 1
-    },
-    {
-      "name": "Item Two",
-      "description": "a regular item",
-      "id": 2
-    }
-  ],
   "comments": [
     {
       "text": "First comment, a seed comment",
       "id": 1,
       "score": 1
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
